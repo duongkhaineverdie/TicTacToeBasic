@@ -60,8 +60,6 @@ fun Modifier.shadow(
         }
     }
 )
-
-enum class ButtonState { Pressed, Idle }
 fun Modifier.bounceClick(
     enabled: Boolean = true,
     onClick: () -> Unit = {/* no-op */},

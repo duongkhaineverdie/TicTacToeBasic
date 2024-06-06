@@ -1,4 +1,4 @@
-package com.moderngame.tictactoebasic.presentation.ui.matchgame.components
+package com.moderngame.tictactoebasic.presentation.ui.tictactoe.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.aspectRatio

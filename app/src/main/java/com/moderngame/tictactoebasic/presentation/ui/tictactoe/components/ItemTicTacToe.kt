@@ -1,20 +1,13 @@
-package com.moderngame.tictactoebasic.presentation.ui.matchgame.components
+package com.moderngame.tictactoebasic.presentation.ui.tictactoe.components
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,7 +17,6 @@ import com.moderngame.tictactoebasic.presentation.ui.theme.DarkBackgroundItem
 import com.moderngame.tictactoebasic.presentation.ui.theme.GreenTicTacToeO
 import com.moderngame.tictactoebasic.presentation.ui.theme.RedTicTacToeX
 import com.moderngame.tictactoebasic.utils.TicTacToe
-import com.moderngame.tictactoebasic.utils.bounceClick
 
 @Composable
 fun ItemTicTacToe(

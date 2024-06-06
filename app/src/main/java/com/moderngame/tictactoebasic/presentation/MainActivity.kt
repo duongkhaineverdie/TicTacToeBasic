@@ -18,7 +18,7 @@ import com.moderngame.tictactoebasic.domain.navigation.Destination
 import com.moderngame.tictactoebasic.domain.navigation.NavHostTrueColor
 import com.moderngame.tictactoebasic.domain.navigation.composable
 import com.moderngame.tictactoebasic.presentation.ui.home.HomeScreen
-import com.moderngame.tictactoebasic.presentation.ui.matchgame.TicTacToeScreen
+import com.moderngame.tictactoebasic.presentation.ui.tictactoe.TicTacToeScreen
 import com.moderngame.tictactoebasic.presentation.ui.setting.SettingScreen
 import com.moderngame.tictactoebasic.presentation.ui.theme.TicTacToeTheme
 

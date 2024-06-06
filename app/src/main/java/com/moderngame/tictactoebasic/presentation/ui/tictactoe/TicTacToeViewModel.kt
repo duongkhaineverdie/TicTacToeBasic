@@ -1,4 +1,4 @@
-package com.moderngame.tictactoebasic.presentation.ui.matchgame
+package com.moderngame.tictactoebasic.presentation.ui.tictactoe
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -6,9 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.moderngame.tictactoebasic.R
 import com.moderngame.tictactoebasic.data.soundmanager.SoundManager
 import com.moderngame.tictactoebasic.domain.interactors.GetAvtIdUseCase
-import com.moderngame.tictactoebasic.domain.interactors.GetHighScoreUseCaseMatchGame
+import com.moderngame.tictactoebasic.domain.interactors.GetGameWonUseCase
 import com.moderngame.tictactoebasic.domain.interactors.GetStatusPlaySoundUseCaseMatchGame
-import com.moderngame.tictactoebasic.domain.interactors.SaveHighScoreUseCaseMatchGame
+import com.moderngame.tictactoebasic.domain.interactors.SaveGameWonUseCase
 import com.moderngame.tictactoebasic.utils.Constants
 import com.moderngame.tictactoebasic.utils.GameLevels
 import com.moderngame.tictactoebasic.utils.TicTacToe
@@ -23,8 +23,8 @@ import kotlinx.coroutines.launch
 
 class TicTacToeViewModel(
     savedStateHandle: SavedStateHandle,
-    private val getHighScoreUseCase: GetHighScoreUseCaseMatchGame,
-    private val saveHighScoreUseCase: SaveHighScoreUseCaseMatchGame,
+    private val getGameWonUseCase: GetGameWonUseCase,
+    private val saveGameWonUseCase: SaveGameWonUseCase,
     private val getStatusPlaySoundUseCaseMatchGame: GetStatusPlaySoundUseCaseMatchGame,
     private val getAvtIdUseCase: GetAvtIdUseCase,
     private val soundManager: SoundManager,
@@ -204,7 +204,7 @@ class TicTacToeViewModel(
 
     private fun getHighScore() {
         viewModelScope.launch {
-            getHighScoreUseCase(Unit).collectLatest { result ->
+            getGameWonUseCase(Unit).collectLatest { result ->
                 result.onSuccess { value ->
                     _stateFlow.update {
                         it.copy(
@@ -218,7 +218,7 @@ class TicTacToeViewModel(
 
     private fun saveHighScore(score: Int) {
         viewModelScope.launch {
-            saveHighScoreUseCase(score).onSuccess {
+            saveGameWonUseCase(score).onSuccess {
                 getHighScore()
             }
         }

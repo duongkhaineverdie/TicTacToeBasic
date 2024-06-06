@@ -19,14 +19,14 @@ class DataStore(private val context: Context) {
     }
 
     companion object {
-        val HIGH_SCORE = intPreferencesKey("HIGH_SCORE")
+        val GAME_WON = intPreferencesKey("GAME_WON")
         val AVT_ID = intPreferencesKey("AVT_ID")
         val IS_PLAYING_SOUND = booleanPreferencesKey("IS_PLAYING_SOUND")
     }
 
-    suspend fun storeHighScore(score: Int) {
+    suspend fun storeGameWon(score: Int) {
         context.dataStore.edit {
-            it[HIGH_SCORE] = score
+            it[GAME_WON] = score
         }
     }
 
@@ -42,8 +42,8 @@ class DataStore(private val context: Context) {
         }
     }
 
-    val highScore: Flow<Int> = context.dataStore.data.map {
-        it[HIGH_SCORE] ?: 0
+    val gameWon: Flow<Int> = context.dataStore.data.map {
+        it[GAME_WON] ?: 0
     }
 
     val avatarId: Flow<Int> = context.dataStore.data.map {

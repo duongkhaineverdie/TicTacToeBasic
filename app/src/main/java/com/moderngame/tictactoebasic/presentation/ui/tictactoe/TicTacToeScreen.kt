@@ -1,4 +1,4 @@
-package com.moderngame.tictactoebasic.presentation.ui.matchgame
+package com.moderngame.tictactoebasic.presentation.ui.tictactoe
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,7 +27,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -38,8 +37,8 @@ import com.moderngame.tictactoebasic.R
 import com.moderngame.tictactoebasic.domain.navigation.Destination
 import com.moderngame.tictactoebasic.presentation.ui.component.TicTacToeDefautButton
 import com.moderngame.tictactoebasic.presentation.ui.component.VictoryDialog
-import com.moderngame.tictactoebasic.presentation.ui.matchgame.components.AvatarCardComponent
-import com.moderngame.tictactoebasic.presentation.ui.matchgame.components.BoardTicTacToeGame
+import com.moderngame.tictactoebasic.presentation.ui.tictactoe.components.AvatarCardComponent
+import com.moderngame.tictactoebasic.presentation.ui.tictactoe.components.BoardTicTacToeGame
 import com.moderngame.tictactoebasic.presentation.ui.theme.BackgroundBoardGameColor
 import com.moderngame.tictactoebasic.presentation.ui.theme.TicTacToeTheme
 import com.moderngame.tictactoebasic.presentation.ui.theme.DarkBackGroundCardAvatar

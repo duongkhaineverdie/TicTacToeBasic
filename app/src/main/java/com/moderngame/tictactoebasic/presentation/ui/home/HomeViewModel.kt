@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.moderngame.tictactoebasic.R
 import com.moderngame.tictactoebasic.data.soundmanager.SoundManager
 import com.moderngame.tictactoebasic.domain.interactors.GetAvtIdUseCase
-import com.moderngame.tictactoebasic.domain.interactors.GetHighScoreUseCaseMatchGame
+import com.moderngame.tictactoebasic.domain.interactors.GetGameWonUseCase
 import com.moderngame.tictactoebasic.domain.interactors.GetStatusPlaySoundUseCaseMatchGame
 import com.moderngame.tictactoebasic.domain.interactors.SetAvtIdUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,7 +18,7 @@ import kotlinx.coroutines.launch
 
 class HomeViewModel(
     savedStateHandle: SavedStateHandle,
-    val getHighScoreUseCase: GetHighScoreUseCaseMatchGame,
+    val getHighScoreUseCase: GetGameWonUseCase,
     private val getAvtIdUseCase: GetAvtIdUseCase,
     private val setAvtIdUseCase: SetAvtIdUseCase,
     private val getStatusPlaySoundUseCaseMatchGame: GetStatusPlaySoundUseCaseMatchGame,

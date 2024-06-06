@@ -4,15 +4,15 @@ import com.moderngame.tictactoebasic.data.datastore.DataStore
 import com.moderngame.tictactoebasic.data.repository.IRepository
 import com.moderngame.tictactoebasic.data.soundmanager.SoundManager
 import com.moderngame.tictactoebasic.domain.interactors.GetAvtIdUseCase
-import com.moderngame.tictactoebasic.domain.interactors.GetHighScoreUseCaseMatchGame
+import com.moderngame.tictactoebasic.domain.interactors.GetGameWonUseCase
 import com.moderngame.tictactoebasic.domain.interactors.GetStatusPlaySoundUseCaseMatchGame
-import com.moderngame.tictactoebasic.domain.interactors.SaveHighScoreUseCaseMatchGame
+import com.moderngame.tictactoebasic.domain.interactors.SaveGameWonUseCase
 import com.moderngame.tictactoebasic.domain.interactors.SetAvtIdUseCase
 import com.moderngame.tictactoebasic.domain.interactors.SetStatusPlaySoundUseCaseMatchGame
 import com.moderngame.tictactoebasic.domain.repository.RepositoryImpl
 import com.moderngame.tictactoebasic.presentation.MainViewModel
 import com.moderngame.tictactoebasic.presentation.ui.home.HomeViewModel
-import com.moderngame.tictactoebasic.presentation.ui.matchgame.TicTacToeViewModel
+import com.moderngame.tictactoebasic.presentation.ui.tictactoe.TicTacToeViewModel
 import com.moderngame.tictactoebasic.presentation.ui.setting.SettingViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.core.module.dsl.factoryOf
@@ -35,8 +35,8 @@ val dataSourceModule = module {
 }
 
 val useCaseModule = module {
-    factoryOf(::GetHighScoreUseCaseMatchGame)
-    factoryOf(::SaveHighScoreUseCaseMatchGame)
+    factoryOf(::GetGameWonUseCase)
+    factoryOf(::SaveGameWonUseCase)
     factoryOf(::GetAvtIdUseCase)
     factoryOf(::SetAvtIdUseCase)
     factoryOf(::SetStatusPlaySoundUseCaseMatchGame)

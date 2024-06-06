@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.Flow
 class RepositoryImpl(
     private val dataStore: DataStore,
 ) : IRepository {
-    override fun getHighScore(): Flow<Int> = dataStore.highScore
-    override suspend fun saveHighScore(score: Int) = dataStore.storeHighScore(score)
+    override fun getGameWon(): Flow<Int> = dataStore.gameWon
+    override suspend fun saveGameWon(score: Int) = dataStore.storeGameWon(score)
     override fun getAvatarId(): Flow<Int> = dataStore.avatarId
 
     override suspend fun setAvatarId(id: Int) = dataStore.setAvatarId(id)

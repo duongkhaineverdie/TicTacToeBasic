@@ -1,4 +1,4 @@
-package com.moderngame.tictactoebasic.presentation.ui.matchgame.components
+package com.moderngame.tictactoebasic.presentation.ui.tictactoe.components
 
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -24,7 +24,6 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
@@ -35,7 +34,6 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.moderngame.tictactoebasic.R
 import com.moderngame.tictactoebasic.presentation.ui.theme.DarkBackGroundCardAvatar
-import com.moderngame.tictactoebasic.presentation.ui.theme.DarkProcessAvatar
 import com.moderngame.tictactoebasic.presentation.ui.theme.GreenTicTacToeO
 import com.moderngame.tictactoebasic.presentation.ui.theme.RedTicTacToeX
 import com.moderngame.tictactoebasic.presentation.ui.theme.TicTacToeTheme

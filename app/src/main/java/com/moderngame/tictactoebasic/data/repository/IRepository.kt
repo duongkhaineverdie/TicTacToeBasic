@@ -3,8 +3,8 @@ package com.moderngame.tictactoebasic.data.repository
 import kotlinx.coroutines.flow.Flow
 
 interface IRepository {
-    fun getHighScore(): Flow<Int>
-    suspend fun saveHighScore(score: Int)
+    fun getGameWon(): Flow<Int>
+    suspend fun saveGameWon(score: Int)
     fun getAvatarId(): Flow<Int>
     suspend fun setAvatarId(id: Int)
 

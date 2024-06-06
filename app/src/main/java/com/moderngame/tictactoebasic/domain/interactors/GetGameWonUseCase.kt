@@ -5,10 +5,10 @@ import com.moderngame.tictactoebasic.domain.interactors.type.TrueColorBaseUseCas
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 
-class GetHighScoreUseCaseMatchGame(
+class GetGameWonUseCase(
     private val repository: IRepository,
     dispatcher: CoroutineDispatcher,
 ) : TrueColorBaseUseCaseFlow<Unit, Int>(dispatcher) {
-    override suspend fun build(param: Unit): Flow<Int> = repository.getHighScore()
+    override suspend fun build(param: Unit): Flow<Int> = repository.getGameWon()
 
 }
