@@ -48,7 +48,7 @@ class TicTacToeViewModel(
         getStatusPlayingSound()
         getHighScore()
         viewModelScope.launch {
-            val timeDelay = 100L
+            val timeDelay = 16L
             while (isActive) {
                 if (stateFlow.value.timeAlive > 0L && stateFlow.value.isPlaying) {
                     val timeLeft = stateFlow.value.timeAlive - timeDelay
@@ -60,6 +60,7 @@ class TicTacToeViewModel(
                         }
                     } else {
                         if (stateFlow.value.realPlayer != stateFlow.value.currentPlayer) {
+                            playSoundClick()
                             if (stateFlow.value.levelsGame == GameLevels.EASY.name) {
                                 turnComputerRandom()
                             } else {

@@ -62,10 +62,10 @@ fun AvatarSelectionDialog(
                         .fillMaxWidth(),
                     painter = painterResource(id = R.drawable.img_background_dialog),
                     contentDescription = null,
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.FillWidth,
                 )
                 Box(
-                    modifier = Modifier,
+                    modifier = Modifier.padding(top = 10.dp),
                     contentAlignment = Alignment.Center
                 ) {
                     LazyVerticalGrid(
